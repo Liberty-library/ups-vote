@@ -1,0 +1,73 @@
+#post-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-box {
+    background: white;
+    width: 75%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+    transition: transform 0.3s ease-out;
+}
+
+.content-box.open {
+    transform: scale(1);
+}
+
+@media (min-width: 1400px) { .post-summary {
+    width: 100%;
+    max-width: 67vw;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 10px;
+    margin-left: 3vw;
+    margin-right: -13vw;
+    }
+}
+
+@media (min-width: 789px) and (max-width: 1399px) { .post-summary {
+    width: 100%;
+    max-width: 67vw;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 10px;
+    margin-left: 15vw;
+    margin-right: -36vw;
+    }
+}
+/* Expanded post takes 75% width */
+.post-summary.expanded {
+    width: 75%;
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the expanded post */
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Ensure inner content stretches properly */
+.post-content {
+    width: 100%;
+    max-width: 100%; /* Prevent content from being smaller than its parent */
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
